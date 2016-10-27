@@ -1,0 +1,15 @@
+
+
+class %serviceName%Service: ServiceConfiguring {
+    
+    typealias GenericParams = %serviceName%ServiceParams
+    typealias GenericMapper = %serviceName%EntityMapper
+    
+    func getClientSettings(_ params: %serviceName%ServiceParams) -> ServiceSettings {
+
+        var serviceSettings = ServiceSettings()
+
+        return serviceSettings
+    }
+    
+}

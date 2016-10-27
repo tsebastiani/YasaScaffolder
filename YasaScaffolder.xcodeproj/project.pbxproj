@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		436AD5171DC21C4D00F21363 /* ServiceConfiguration.yasa in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */; };
+		436AD52C1DC227F700F21363 /* ServiceParams.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065021DC21AAC0050D227 /* ServiceParams.yasa */; };
+		436AD52D1DC227F700F21363 /* EntityMapper.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065041DC21B5C0050D227 /* EntityMapper.yasa */; };
+		436AD52E1DC227F700F21363 /* ServiceConfiguration.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */; };
+		436AD52F1DC227F700F21363 /* ClassHeader.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065001DC21A2F0050D227 /* ClassHeader.yasa */; };
+		436AD5301DC227F700F21363 /* Entity.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065011DC21A630050D227 /* Entity.yasa */; };
+		438065051DC21B5C0050D227 /* EntityMapper.yasa in Sources */ = {isa = PBXBuildFile; fileRef = 438065041DC21B5C0050D227 /* EntityMapper.yasa */; };
+		43E9ADD41DC2143F00AC8F79 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9ADD31DC2143F00AC8F79 /* main.swift */; };
+		43E9ADFB1DC214A400AC8F79 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9ADF91DC214A400AC8F79 /* Console.swift */; };
+		43E9ADFC1DC214A400AC8F79 /* XcodeProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9ADFA1DC214A400AC8F79 /* XcodeProjectManager.swift */; };
+		43E9AE011DC2176F00AC8F79 /* CodeTemplatesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9AE001DC2176F00AC8F79 /* CodeTemplatesGenerator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43E9ADDF1DC2146300AC8F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E9ADDA1DC2146200AC8F79 /* XcodeEditor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BE8FDAD1C01C190001EF5B3;
+			remoteInfo = XcodeEditor;
+		};
+		43E9ADE11DC2146300AC8F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E9ADDA1DC2146200AC8F79 /* XcodeEditor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BE8FDB71C01C190001EF5B3;
+			remoteInfo = XcodeEditorTests;
+		};
+		43E9ADF71DC2148B00AC8F79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E9ADDA1DC2146200AC8F79 /* XcodeEditor.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BE8FDAC1C01C190001EF5B3;
+			remoteInfo = XcodeEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		43E9ADCE1DC2143F00AC8F79 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = templates;
+			dstSubfolderSpec = 16;
+			files = (
+				436AD52C1DC227F700F21363 /* ServiceParams.yasa in CopyFiles */,
+				436AD52D1DC227F700F21363 /* EntityMapper.yasa in CopyFiles */,
+				436AD52E1DC227F700F21363 /* ServiceConfiguration.yasa in CopyFiles */,
+				436AD52F1DC227F700F21363 /* ClassHeader.yasa in CopyFiles */,
+				436AD5301DC227F700F21363 /* Entity.yasa in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ServiceConfiguration.yasa; sourceTree = "<group>"; };
+		438065001DC21A2F0050D227 /* ClassHeader.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ClassHeader.yasa; sourceTree = "<group>"; };
+		438065011DC21A630050D227 /* Entity.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Entity.yasa; sourceTree = "<group>"; };
+		438065021DC21AAC0050D227 /* ServiceParams.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ServiceParams.yasa; sourceTree = "<group>"; };
+		438065041DC21B5C0050D227 /* EntityMapper.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EntityMapper.yasa; sourceTree = "<group>"; };
+		438065061DC21B750050D227 /* placeholders.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = placeholders.yasa; sourceTree = "<group>"; };
+		43E9ADD01DC2143F00AC8F79 /* YasaScaffolder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = YasaScaffolder; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E9ADD31DC2143F00AC8F79 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		43E9ADDA1DC2146200AC8F79 /* XcodeEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XcodeEditor.xcodeproj; path = XcodeEditor/XcodeEditor.xcodeproj; sourceTree = "<group>"; };
+		43E9ADF91DC214A400AC8F79 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
+		43E9ADFA1DC214A400AC8F79 /* XcodeProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeProjectManager.swift; sourceTree = "<group>"; };
+		43E9AE001DC2176F00AC8F79 /* CodeTemplatesGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTemplatesGenerator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43E9ADCD1DC2143F00AC8F79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		436AD5191DC21D7400F21363 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				438065021DC21AAC0050D227 /* ServiceParams.yasa */,
+				438065041DC21B5C0050D227 /* EntityMapper.yasa */,
+				436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		438064FD1DC219590050D227 /* CodeTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				436AD5191DC21D7400F21363 /* Service */,
+				438065001DC21A2F0050D227 /* ClassHeader.yasa */,
+				438065011DC21A630050D227 /* Entity.yasa */,
+				438065061DC21B750050D227 /* placeholders.yasa */,
+			);
+			path = CodeTemplates;
+			sourceTree = "<group>";
+		};
+		43E9ADC71DC2143F00AC8F79 = {
+			isa = PBXGroup;
+			children = (
+				43E9ADDA1DC2146200AC8F79 /* XcodeEditor.xcodeproj */,
+				43E9ADD21DC2143F00AC8F79 /* YasaScaffolder */,
+				43E9ADD11DC2143F00AC8F79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43E9ADD11DC2143F00AC8F79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43E9ADD01DC2143F00AC8F79 /* YasaScaffolder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43E9ADD21DC2143F00AC8F79 /* YasaScaffolder */ = {
+			isa = PBXGroup;
+			children = (
+				438064FD1DC219590050D227 /* CodeTemplates */,
+				43E9ADF91DC214A400AC8F79 /* Console.swift */,
+				43E9ADFA1DC214A400AC8F79 /* XcodeProjectManager.swift */,
+				43E9ADD31DC2143F00AC8F79 /* main.swift */,
+				43E9AE001DC2176F00AC8F79 /* CodeTemplatesGenerator.swift */,
+			);
+			path = YasaScaffolder;
+			sourceTree = "<group>";
+		};
+		43E9ADDB1DC2146200AC8F79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43E9ADE01DC2146300AC8F79 /* XcodeEditor.framework */,
+				43E9ADE21DC2146300AC8F79 /* XcodeEditorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43E9ADCF1DC2143F00AC8F79 /* YasaScaffolder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43E9ADD71DC2143F00AC8F79 /* Build configuration list for PBXNativeTarget "YasaScaffolder" */;
+			buildPhases = (
+				43E9ADCC1DC2143F00AC8F79 /* Sources */,
+				43E9ADCD1DC2143F00AC8F79 /* Frameworks */,
+				43E9ADCE1DC2143F00AC8F79 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43E9ADF81DC2148B00AC8F79 /* PBXTargetDependency */,
+			);
+			name = YasaScaffolder;
+			productName = YasaScaffolder;
+			productReference = 43E9ADD01DC2143F00AC8F79 /* YasaScaffolder */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43E9ADC81DC2143F00AC8F79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Tullio Sebastiani";
+				TargetAttributes = {
+					43E9ADCF1DC2143F00AC8F79 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 43E9ADCB1DC2143F00AC8F79 /* Build configuration list for PBXProject "YasaScaffolder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43E9ADC71DC2143F00AC8F79;
+			productRefGroup = 43E9ADD11DC2143F00AC8F79 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 43E9ADDB1DC2146200AC8F79 /* Products */;
+					ProjectRef = 43E9ADDA1DC2146200AC8F79 /* XcodeEditor.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				43E9ADCF1DC2143F00AC8F79 /* YasaScaffolder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		43E9ADE01DC2146300AC8F79 /* XcodeEditor.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XcodeEditor.framework;
+			remoteRef = 43E9ADDF1DC2146300AC8F79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		43E9ADE21DC2146300AC8F79 /* XcodeEditorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XcodeEditorTests.xctest;
+			remoteRef = 43E9ADE11DC2146300AC8F79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43E9ADCC1DC2143F00AC8F79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E9ADFC1DC214A400AC8F79 /* XcodeProjectManager.swift in Sources */,
+				43E9AE011DC2176F00AC8F79 /* CodeTemplatesGenerator.swift in Sources */,
+				43E9ADD41DC2143F00AC8F79 /* main.swift in Sources */,
+				43E9ADFB1DC214A400AC8F79 /* Console.swift in Sources */,
+				438065051DC21B5C0050D227 /* EntityMapper.yasa in Sources */,
+				436AD5171DC21C4D00F21363 /* ServiceConfiguration.yasa in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43E9ADF81DC2148B00AC8F79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XcodeEditor;
+			targetProxy = 43E9ADF71DC2148B00AC8F79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		43E9ADD51DC2143F00AC8F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43E9ADD61DC2143F00AC8F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43E9ADD81DC2143F00AC8F79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		43E9ADD91DC2143F00AC8F79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43E9ADCB1DC2143F00AC8F79 /* Build configuration list for PBXProject "YasaScaffolder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43E9ADD51DC2143F00AC8F79 /* Debug */,
+				43E9ADD61DC2143F00AC8F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43E9ADD71DC2143F00AC8F79 /* Build configuration list for PBXNativeTarget "YasaScaffolder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43E9ADD81DC2143F00AC8F79 /* Debug */,
+				43E9ADD91DC2143F00AC8F79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43E9ADC81DC2143F00AC8F79 /* Project object */;
+}

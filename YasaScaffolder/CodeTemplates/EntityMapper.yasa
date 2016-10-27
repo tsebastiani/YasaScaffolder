@@ -1,0 +1,12 @@
+
+
+class %serviceName%EntityMapper: EntityMapping {
+    typealias GenericMappedEntity = %entityName%
+    func dataToEntity(data: Data) -> GenericMappedEntity? {
+        
+        
+    }
+    func entityToData(entity: %entityName%?) -> Data? {
+        return nil
+    }
+}
