@@ -52,16 +52,16 @@ class CodeTemplateGenerator {
             
             var header = try String(contentsOfFile: Templates.classHeader).replacingOccurrences(of: placeholders.date, with: String(describing: Date()))
             
-            header = header.replacingOccurrences(of: placeholders.serviceName, with: name)
+            header = header.replacingOccurrences(of: placeholders.serviceName, with: name.capitalized)
             
             
-            let entity = try String(contentsOfFile: Templates.entity).replacingOccurrences(of: placeholders.entityName, with: entityName)
+            let entity = try String(contentsOfFile: Templates.entity).replacingOccurrences(of: placeholders.entityName, with: entityName.capitalized)
             
-            let serviceParams = try String(contentsOfFile: Templates.serviceParams).replacingOccurrences(of: placeholders.serviceName, with: name)
+            let serviceParams = try String(contentsOfFile: Templates.serviceParams).replacingOccurrences(of: placeholders.serviceName, with: name.capitalized)
 
-            var entityMapper = try String(contentsOfFile: Templates.entityMapper).replacingOccurrences(of: placeholders.serviceName, with: name)
+            var entityMapper = try String(contentsOfFile: Templates.entityMapper).replacingOccurrences(of: placeholders.serviceName, with: name.capitalized)
             
-            entityMapper = entityMapper.replacingOccurrences(of: placeholders.entityName, with: name)
+            entityMapper = entityMapper.replacingOccurrences(of: placeholders.entityName, with: name.capitalized)
             
             return header + entity + serviceParams + entityMapper
             
