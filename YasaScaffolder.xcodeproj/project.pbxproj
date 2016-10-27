@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		43414A851DC27AB2002EF06A /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43414A841DC27AB2002EF06A /* Templates.swift */; };
 		43414A871DC27D58002EF06A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43414A861DC27D58002EF06A /* File.swift */; };
-		436AD5171DC21C4D00F21363 /* ServiceConfiguration.yasa in Sources */ = {isa = PBXBuildFile; fileRef = 436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */; };
 		436AD52C1DC227F700F21363 /* ServiceParams.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065021DC21AAC0050D227 /* ServiceParams.yasa */; };
 		436AD52D1DC227F700F21363 /* EntityMapper.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065041DC21B5C0050D227 /* EntityMapper.yasa */; };
 		436AD52E1DC227F700F21363 /* ServiceConfiguration.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */; };
 		436AD52F1DC227F700F21363 /* ClassHeader.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065001DC21A2F0050D227 /* ClassHeader.yasa */; };
 		436AD5301DC227F700F21363 /* Entity.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065011DC21A630050D227 /* Entity.yasa */; };
-		438065051DC21B5C0050D227 /* EntityMapper.yasa in Sources */ = {isa = PBXBuildFile; fileRef = 438065041DC21B5C0050D227 /* EntityMapper.yasa */; };
 		43E9ADD41DC2143F00AC8F79 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9ADD31DC2143F00AC8F79 /* main.swift */; };
 		43E9ADFB1DC214A400AC8F79 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9ADF91DC214A400AC8F79 /* Console.swift */; };
 		43E9ADFC1DC214A400AC8F79 /* XcodeProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E9ADFA1DC214A400AC8F79 /* XcodeProjectManager.swift */; };
@@ -159,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E9ADD71DC2143F00AC8F79 /* Build configuration list for PBXNativeTarget "YasaScaffolder" */;
 			buildPhases = (
+				43B0126F1DC2998500A009C8 /* ShellScript */,
 				43E9ADCC1DC2143F00AC8F79 /* Sources */,
 				43E9ADCD1DC2143F00AC8F79 /* Frameworks */,
 				43E9ADCE1DC2143F00AC8F79 /* CopyFiles */,
@@ -229,6 +228,22 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43B0126F1DC2998500A009C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43E9ADCC1DC2143F00AC8F79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -240,8 +255,6 @@
 				43E9ADFB1DC214A400AC8F79 /* Console.swift in Sources */,
 				43414A851DC27AB2002EF06A /* Templates.swift in Sources */,
 				43414A871DC27D58002EF06A /* File.swift in Sources */,
-				438065051DC21B5C0050D227 /* EntityMapper.yasa in Sources */,
-				436AD5171DC21C4D00F21363 /* ServiceConfiguration.yasa in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

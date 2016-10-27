@@ -19,13 +19,12 @@ class Placeholders {
                                                       .entity:"%entityName%"]
 }
 
-
 class Templates {
     static var templatesFolder: String {
-        get{
+        get {
             return FileManager.default.currentDirectoryPath+"/templates/"
         }
-        set{}
+        set {}
     }
     static var classHeader: String {
         get {
@@ -33,28 +32,28 @@ class Templates {
         }
         set {}
     }
-    
+
     static var entity: String {
         get {
             return templatesFolder+"Entity.yasa"
         }
         set {}
     }
-    
+
     static var entityMapper: String {
         get {
             return templatesFolder+"EntityMapper.yasa"
         }
         set {}
-        
+
     }
-    
+
     static var serviceParams: String {
         get {
             return templatesFolder+"ServiceParams.yasa"
         }
         set {}
-        
+
     }
-    
+
 }

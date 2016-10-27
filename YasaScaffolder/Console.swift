@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ConsoleParams{
+enum ConsoleParams {
     case serviceName
     case enitityName
     case clientName
@@ -16,7 +16,7 @@ enum ConsoleParams{
 
 class Console {
      private(set) var userParams = [ConsoleParams: String]()
-     func startConsoleFlow(){
-        
+     func startConsoleFlow() {
+
     }
 }

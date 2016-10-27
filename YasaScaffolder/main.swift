@@ -8,10 +8,8 @@
 
 import Foundation
 
-
 let templateGenerator = CodeTemplateGenerator(withConsoleParams: [.serviceName: "test", .enitityName: "Risultato"])
 
-if let template = templateGenerator.template(of: .service){
+if let template = templateGenerator.template(of: .service) {
         print(template)
 }
-
