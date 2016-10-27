@@ -7,12 +7,18 @@
 //
 
 import Foundation
-
-class placeholders {
-    static let serviceName = "%serviceName%"
-    static let date = "%date%"
-    static let entityName = "%entityName%"
+enum Placeholder {
+    case serviceName
+    case date
+    case entity
 }
+
+class Placeholders {
+    static let placeHolders: [Placeholder: String] = [.serviceName:"%serviceName%",
+                                                      .date:"%date%",
+                                                      .entity:"%entityName%"]
+}
+
 
 class Templates {
     static var templatesFolder: String {
