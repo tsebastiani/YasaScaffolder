@@ -23,6 +23,8 @@ enum TemplateType{
  }
  */
 
+
+
 class CodeTemplateGenerator {
     var collectedParams: [ConsoleParams: String]?
     
@@ -45,8 +47,27 @@ class CodeTemplateGenerator {
     
     private func templateForService(name: String, entityName: String) -> String?{
          
-         let ris=FileManager.default.fileExists(atPath: FileManager.default.currentDirectoryPath+"/templates/ClassHeader.yasa")
-        print(FileManager.default.currentDirectoryPath+"/templates/ClassHeader.yasa")
+        
+        do {
+            
+            var header = try String(contentsOfFile: Templates.classHeader).replacingOccurrences(of: placeholders.date, with: String(describing: Date()))
+            
+            header = header.replacingOccurrences(of: placeholders.serviceName, with: name)
+            
+            
+            let entity = try String(contentsOfFile: Templates.entity).replacingOccurrences(of: placeholders.entityName, with: entityName)
+            
+            let serviceParams = try String(contentsOfFile: Templates.serviceParams).replacingOccurrences(of: placeholders.serviceName, with: name)
+
+            var entityMapper = try String(contentsOfFile: Templates.entityMapper).replacingOccurrences(of: placeholders.serviceName, with: name)
+            
+            entityMapper = entityMapper.replacingOccurrences(of: placeholders.entityName, with: name)
+            
+            return header + entity + serviceParams + entityMapper
+            
+        }catch{
+            
+        }
         
         return nil
     }

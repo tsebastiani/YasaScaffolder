@@ -9,7 +9,9 @@
 import Foundation
 
 
-let template = CodeTemplateGenerator(withConsoleParams: [.serviceName: "test", .enitityName: "Risultato"])
+let templateGenerator = CodeTemplateGenerator(withConsoleParams: [.serviceName: "test", .enitityName: "Risultato"])
 
+if let template = templateGenerator.template(of: .service){
+        print(template)
+}
 
-print(template.template(of: .service))
