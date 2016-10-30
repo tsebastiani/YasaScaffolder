@@ -14,64 +14,67 @@ enum TemplateType {
     case client
 }
 
-/*
- enum ConsoleParams{
- case serviceName
- case enitityName
- case clientName
- }
- */
 
 class CodeTemplateGenerator {
     var collectedParams: [ConsoleParams: String]?
-
+    
     init(withConsoleParams params: [ConsoleParams: String]) {
         self.collectedParams = params
-
+        
     }
-
+    
     func template(of: TemplateType) -> String? {
-        guard let safeParams: [ConsoleParams: String] = collectedParams else {
-            return nil
+        guard let safeParams: [ConsoleParams: String] = collectedParams,
+            let serviceName = safeParams[.serviceName],
+            let entityName = safeParams[.enitityName]
+        else {
+                return nil
         }
+        
         switch of {
         case .service:
-            return templateForService(name: safeParams[.serviceName]!, entityName: safeParams[.enitityName]!)
+            return templateForService(name: serviceName , entityName: entityName )
         default:
             return nil
         }
     }
-
+    
     private func templateForService(name: String, entityName: String) -> String? {
-
-        do {
-
-          /*  var header = try String(contentsOfFile: Templates.classHeader).replacingOccurrences(of: placeholders.date, with: String(describing: Date()))
-
-            header = header.replacingOccurrences(of: placeholders.serviceName, with: name.capitalized)
-
-            let entity = try String(contentsOfFile: Templates.entity).replacingOccurrences(of: placeholders.entityName, with: entityName.capitalized)
-
-            let serviceParams = try String(contentsOfFile: Templates.serviceParams).replacingOccurrences(of: placeholders.serviceName, with: name.capitalized)
-
-            var entityMapper = try String(contentsOfFile: Templates.entityMapper).replacingOccurrences(of: placeholders.serviceName, with: name.capitalized)
-
-            entityMapper = entityMapper.replacingOccurrences(of: placeholders.entityName, with: name.capitalized)
-
-            return header + entity + serviceParams + entityMapper*/
-
-        } catch {
-
-        }
-
-        return nil
+        var templates = [String]()
+        var placeHolders = [Placeholder: String]()
+        
+        templates.append(Templates.classHeader)
+        templates.append(Templates.entity)
+        templates.append(Templates.serviceParams)
+        templates.append(Templates.entityMapper)
+        
+        placeHolders[Placeholder.date] = String(describing: Date())
+        placeHolders[Placeholder.entity] = entityName
+        placeHolders[Placeholder.serviceName] = name
+        
+        let result = replacePlaceholders(templates: templates, withMappings: placeHolders).reduce("", {$0+$1})
+        return result
     }
-
-    func replacePlaceholders(templates: [String], withMapping mapping: [Placeholder:String]) -> [String] {
+    
+    func replacePlaceholders(templates: [String], withMappings mappings: [Placeholder:String]) -> [String] {
         var changedTemplates = [String]()
         for template in templates {
-            return [Placeholder:String]()
+            var fileContent = ""
+            do {
+                fileContent = try String(contentsOfFile: template)
+            } catch {
+                continue
+            }
+            for mapping in mappings{
+                guard let occurrence = Placeholders.placeHolders[mapping.key] else {
+                    continue
+                }
+                fileContent = fileContent.replacingOccurrences(of: occurrence , with: mapping.value)
+            }
+            
+            changedTemplates.append(fileContent)
         }
+        return changedTemplates
     }
-
+    
 }
