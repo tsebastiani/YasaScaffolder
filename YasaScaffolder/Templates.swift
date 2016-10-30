@@ -13,6 +13,8 @@ enum Placeholder {
     case entity
 }
 
+// #warning Capitalized an lowercased placeholders category of string passing the placeholder?
+
 class Placeholders {
     static let placeHolders: [Placeholder: String] = [.serviceName:"%serviceName%",
                                                       .date:"%date%",

@@ -1,0 +1,15 @@
+public func %serviceName%(args: String..., callback: @escaping (_ %entityName%: %entityName%?, _ error: Error?)->()) {
+        let %serviceName%Serv: Service<%serviceName%Service, %client%> = Service(client: %client%(),
+                                                                         service: %serviceName%Service(),
+                                                                         mapper: %serviceName%EntityMapper())
+        var %serviceName%Params: %serviceName%ServiceParams = %serviceName%Params()
+
+        %serviceName%serv.query(params: %serviceName%Params) { (entity: %serviceName%EntityMapper.GenericMappedEntity?, error: Error?) in
+            guard let entity = entity, error == nil else {
+                callback(nil, error)
+                return
+            }
+            callback(entity, nil)
+        }
+
+    }

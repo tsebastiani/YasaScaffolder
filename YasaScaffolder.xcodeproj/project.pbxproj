@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43414A851DC27AB2002EF06A /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43414A841DC27AB2002EF06A /* Templates.swift */; };
-		43414A871DC27D58002EF06A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43414A861DC27D58002EF06A /* File.swift */; };
+		435BED421DC6169C0004798C /* FacadeFunction.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 435BED401DC613F90004798C /* FacadeFunction.yasa */; };
 		436AD52C1DC227F700F21363 /* ServiceParams.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065021DC21AAC0050D227 /* ServiceParams.yasa */; };
 		436AD52D1DC227F700F21363 /* EntityMapper.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065041DC21B5C0050D227 /* EntityMapper.yasa */; };
 		436AD52E1DC227F700F21363 /* ServiceConfiguration.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */; };
@@ -51,6 +51,7 @@
 			dstPath = templates;
 			dstSubfolderSpec = 16;
 			files = (
+				435BED421DC6169C0004798C /* FacadeFunction.yasa in CopyFiles */,
 				436AD52C1DC227F700F21363 /* ServiceParams.yasa in CopyFiles */,
 				436AD52D1DC227F700F21363 /* EntityMapper.yasa in CopyFiles */,
 				436AD52E1DC227F700F21363 /* ServiceConfiguration.yasa in CopyFiles */,
@@ -63,7 +64,7 @@
 
 /* Begin PBXFileReference section */
 		43414A841DC27AB2002EF06A /* Templates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
-		43414A861DC27D58002EF06A /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		435BED401DC613F90004798C /* FacadeFunction.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FacadeFunction.yasa; sourceTree = "<group>"; };
 		436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ServiceConfiguration.yasa; sourceTree = "<group>"; };
 		438065001DC21A2F0050D227 /* ClassHeader.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ClassHeader.yasa; sourceTree = "<group>"; };
 		438065011DC21A630050D227 /* Entity.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Entity.yasa; sourceTree = "<group>"; };
@@ -89,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		435BED3E1DC613650004798C /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				435BED401DC613F90004798C /* FacadeFunction.yasa */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
 		436AD5191DC21D7400F21363 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,14 +105,14 @@
 				438065021DC21AAC0050D227 /* ServiceParams.yasa */,
 				438065041DC21B5C0050D227 /* EntityMapper.yasa */,
 				436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */,
-				43414A861DC27D58002EF06A /* File.swift */,
 			);
-			name = Service;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		438064FD1DC219590050D227 /* CodeTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				435BED3E1DC613650004798C /* Facade */,
 				436AD5191DC21D7400F21363 /* Service */,
 				438065001DC21A2F0050D227 /* ClassHeader.yasa */,
 				438065061DC21B750050D227 /* placeholders.yasa */,
@@ -254,7 +263,6 @@
 				43E9ADD41DC2143F00AC8F79 /* main.swift in Sources */,
 				43E9ADFB1DC214A400AC8F79 /* Console.swift in Sources */,
 				43414A851DC27AB2002EF06A /* Templates.swift in Sources */,
-				43414A871DC27D58002EF06A /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
