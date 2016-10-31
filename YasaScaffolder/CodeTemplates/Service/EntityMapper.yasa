@@ -1,6 +1,6 @@
 
 
-class %serviceName%EntityMapper: EntityMapping {
+class %#serviceName%EntityMapper: EntityMapping {
     typealias GenericMappedEntity = %#entityName%
     func dataToEntity(data: Data) -> GenericMappedEntity? {
         

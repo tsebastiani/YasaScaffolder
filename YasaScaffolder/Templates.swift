@@ -11,6 +11,7 @@ enum Placeholder {
     case serviceName
     case date
     case entity
+    case client
 }
 
 // #warning Capitalized an lowercased placeholders category of string passing the placeholder?
@@ -18,7 +19,8 @@ enum Placeholder {
 class Placeholders {
     static let placeHolders: [Placeholder: String] = [.serviceName:"%serviceName%",
                                                       .date:"%date%",
-                                                      .entity:"%entityName%"]
+                                                      .entity:"%entityName%",
+                                                      .client:"%client%"]
 }
 
 class Templates {
@@ -53,6 +55,14 @@ class Templates {
     static var serviceParams: String {
         get {
             return templatesFolder+"ServiceParams.yasa"
+        }
+        set {}
+
+    }
+
+    static var facade: String {
+        get {
+            return templatesFolder+"FacadeFunction.yasa"
         }
         set {}
 

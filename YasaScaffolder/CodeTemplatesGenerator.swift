@@ -25,7 +25,8 @@ class CodeTemplateGenerator {
     func template(of: TemplateType) -> String? {
         guard let safeParams: [ConsoleParams: String] = collectedParams,
             let serviceName = safeParams[.serviceName],
-            let entityName = safeParams[.enitityName]
+            let entityName = safeParams[.enitityName],
+            let clientName = safeParams[.clientName]
         else {
                 return nil
         }
@@ -33,6 +34,8 @@ class CodeTemplateGenerator {
         switch of {
         case .service:
             return templateForService(name: serviceName, entityName: entityName)
+        case .frameworkFacade:
+            return templateForFacade(name: serviceName, entityName: entityName, client:clientName)
         default:
             return nil
         }
@@ -60,6 +63,20 @@ class CodeTemplateGenerator {
 
         let result = replacePlaceholders(templates: templates, withMappings: placeHolders).reduce("", {$0+$1})
         return result
+    }
+
+    private func templateForFacade(name: String, entityName: String, client: String) -> String {
+        var templates = [String]()
+        var placeHolders = [Placeholder: String]()
+
+        templates.append(Templates.facade)
+
+        placeHolders[Placeholder.entity] = entityName
+        placeHolders[Placeholder.serviceName] = name
+        placeHolders[Placeholder.client] = client
+        let result = replacePlaceholders(templates: templates, withMappings: placeHolders).reduce("", {$0+$1})
+        return result
+
     }
 
     func replacePlaceholders(templates: [String], withMappings mappings: [Placeholder:String]) -> [String] {

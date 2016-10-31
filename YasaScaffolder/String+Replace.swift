@@ -21,18 +21,18 @@ extension String {
     }
 
     func replaceOccurencesUppercasing(of: String, with: String) -> String {
-        var selfString = ""
         let pattern = of
-        var replaceString = with
+        var capitalPattern = pattern.replacingOccurrences(of: "%", with: "")
+        capitalPattern = "%#\(capitalPattern)%"
+        var replaceString = with.lowercased()
 
-        if let _ = self.range(of: "#") {
-            selfString = self.replacingOccurrences(of: "#", with: "")
-            replaceString = replaceString.capitalized
-            return selfString.replacingOccurrences(of: pattern, with: replaceString)
-        } else {
-            replaceString = replaceString.uncapitalized
+        var string = self
+
+        if let _ = string.range(of: capitalPattern) {
+            string = string.replacingOccurrences(of: capitalPattern, with: replaceString.capitalized)
         }
 
-        return self.replacingOccurrences(of: pattern, with: replaceString)
+        return string.replacingOccurrences(of: pattern, with: replaceString.uncapitalized)
+
     }
 }
