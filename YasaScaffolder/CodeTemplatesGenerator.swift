@@ -75,7 +75,9 @@ class CodeTemplateGenerator {
                 guard let occurrence = Placeholders.placeHolders[mapping.key] else {
                     continue
                 }
-                fileContent = fileContent.replacingOccurrences(of: occurrence, with: mapping.value)
+
+                fileContent = fileContent.replaceOccurencesUppercasing(of: occurrence, with: mapping.value)
+
             }
 
             changedTemplates.append(fileContent)

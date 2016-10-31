@@ -1,5 +1,5 @@
 
 
-struct %serviceName%ServiceParams  {
+struct %#serviceName%ServiceParams  {
 
 }

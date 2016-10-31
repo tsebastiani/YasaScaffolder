@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43356B971DC73E6D00FD5BDB /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43356B961DC73E6D00FD5BDB /* String+Replace.swift */; };
 		43414A851DC27AB2002EF06A /* Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43414A841DC27AB2002EF06A /* Templates.swift */; };
 		435BED421DC6169C0004798C /* FacadeFunction.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 435BED401DC613F90004798C /* FacadeFunction.yasa */; };
 		436AD52C1DC227F700F21363 /* ServiceParams.yasa in CopyFiles */ = {isa = PBXBuildFile; fileRef = 438065021DC21AAC0050D227 /* ServiceParams.yasa */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		43356B961DC73E6D00FD5BDB /* String+Replace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Replace.swift"; sourceTree = "<group>"; };
 		43414A841DC27AB2002EF06A /* Templates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Templates.swift; sourceTree = "<group>"; };
 		435BED401DC613F90004798C /* FacadeFunction.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FacadeFunction.yasa; sourceTree = "<group>"; };
 		436AD5161DC21C4D00F21363 /* ServiceConfiguration.yasa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ServiceConfiguration.yasa; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				43E9ADD31DC2143F00AC8F79 /* main.swift */,
 				43E9AE001DC2176F00AC8F79 /* CodeTemplatesGenerator.swift */,
 				43414A841DC27AB2002EF06A /* Templates.swift */,
+				43356B961DC73E6D00FD5BDB /* String+Replace.swift */,
 			);
 			path = YasaScaffolder;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E9ADFC1DC214A400AC8F79 /* XcodeProjectManager.swift in Sources */,
+				43356B971DC73E6D00FD5BDB /* String+Replace.swift in Sources */,
 				43E9AE011DC2176F00AC8F79 /* CodeTemplatesGenerator.swift in Sources */,
 				43E9ADD41DC2143F00AC8F79 /* main.swift in Sources */,
 				43E9ADFB1DC214A400AC8F79 /* Console.swift in Sources */,
@@ -369,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -378,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
